@@ -69,6 +69,9 @@ const (
 	Runners                FeatureName = "runners"
 	ConnectLocalCluster    FeatureName = "connect-local-cluster"
 	PasswordAuthentication FeatureName = "password-auth"
+
+	//Project Quotas
+	VirtualClusterProDistroProjectQuotas = "project-quotas"
 )
 
 func GetVClusterFeatures() []FeatureName {
@@ -93,5 +96,6 @@ func GetVClusterFeatures() []FeatureName {
 		VirtualClusterProDistroExternalDatabase,
 		VirtualClusterProDistroDatabaseConnector,
 		VirtualClusterProDistroSleepMode,
+		VirtualClusterProDistroProjectQuotas,
 	}
 }

@@ -160,6 +160,12 @@ func New(product ProductName) *License {
 						Name:        string(VirtualClusterProDistroSleepMode),
 						Status:      virtualClusterStatus,
 					},
+
+					{
+						DisplayName: "ProjectQuotas",
+						Name:        string(VirtualClusterProDistroProjectQuotas),
+						Status:      virtualClusterStatus,
+					},
 				},
 			},
 			{
