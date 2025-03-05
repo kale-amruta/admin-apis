@@ -15,6 +15,24 @@ func New() *License {
 	slices.SortFunc(limits, func(a, b *Limit) int {
 		return cmp.Compare(a.Name, b.Name)
 	})
+	plans := make([]Plan, 5)
+
+	var startTime int64 = 1741159204
+	plan := Plan{
+		ID:          "prod_OlIczzkP2ZyVNc",
+		DisplayName: "vCluster Enterprise Trial",
+		Status:      "trialing",
+		Period: &PlanPeriod{
+			CurrentPeriodStart: 1741159204,
+			CurrentPeriodEnd:   1742368804,
+		},
+		Trial: &Trial{
+			Start: &startTime,
+			End:   1742368804,
+		},
+	}
+
+	plans = append(plans, plan)
 
 	// Sorting features by module is not requires here. However, to maintain backwards compatibility, the structure of
 	// features being contained within a module is still necessary. Therefore, all features are now returned in one module.
@@ -212,5 +230,6 @@ func New() *License {
 				},
 			},
 		},
+		Plans: plans,
 	}
 }
